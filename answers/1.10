@@ -1,0 +1,2 @@
+docker exec -it Docker_Victor /bin/bash
+cat /etc/*release
