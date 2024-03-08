@@ -1,2 +1,3 @@
-docker stop <container-id>
-docker run -d -p 8080:8080 --name meaningful-name VictorBqn/my-back-app:latest
+docker stop meaningful-name
+docker rm meaningful-name
+docker run -d -p 8080:8080 --name Docker_Victor VictorBqn/my-back-app:latest
