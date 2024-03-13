@@ -1,0 +1,5 @@
+Access the back-end container's shell:
+docker exec -it back-end sh
+
+Inside the container, check the log file
+cat ./logs/my-messages.log
