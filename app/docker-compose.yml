@@ -1,4 +1,21 @@
 version: '3'
+
 services:
-  my-service:
-    image: my-image
+  back-end:
+    image: victorbqn/back-end:v1
+    ports:
+      - "8000:80"
+    environment:
+      - SOME_ENV_VAR=value
+    volumes:
+      - back-end-data:/path/in/container # Adjust the path as necessary
+
+  front-end:
+    image: victorbqn/front-end:v1
+    ports:
+      - "8082:80"
+    environment:
+      - WS_BACK_URL=http://back-end:80
+
+volumes:
+  back-end-data: {}
