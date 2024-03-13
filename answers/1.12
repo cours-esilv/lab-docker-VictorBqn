@@ -1,0 +1,5 @@
+# Command to start the back-end container
+docker run -d -p 8000:80 --name back-end victorbqn/back-end:v1
+
+# Command to start the front-end container with an environment variable pointing to the back-end
+docker run -d -p 8082:80 -e WS_BACK_URL=http://host.docker.internal:8000 --name front-end-new victorbqn/front-end:v1
