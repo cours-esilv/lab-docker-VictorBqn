@@ -1,0 +1,4 @@
+Stop all the containers and delete all the local images you have created so far.
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
